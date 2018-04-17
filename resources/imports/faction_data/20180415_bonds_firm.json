@@ -1,0 +1,317 @@
+{
+	"weapon_rules":
+	[
+		{
+			"name":"Pierce(1)",
+			"description":"When making an Armour Roll against Damage caused by this Weapon deduct 1 from the defending Model’s Toughness Attribute (to a minimum of 1)."
+		},
+		{
+			"name":"Fire(1)",
+			"description":"Place 1 Fire Tokens on any Model hit by this Weapon to indicate a Model which has been Set on Fire. A Model which is Set on Fire must make a single Armour Roll during the Cleanup Phase. If this Armour Roll is failed the Model takes 1 wound. If the Armour Roll is successful remove 1 Fire Token. If this Model enters Water all Fire Tokens are immediately removed."
+		},
+		{
+			"name":"Stun(1)",
+			"description":"When you successfully hit a Model with this Weapon, after applying any Damage, you may remove up to 1 AP from that Model."
+		},
+		{
+			"name":"Rend(1)",
+			"description":"When making an Armour Roll against hits made by this Weapon reduce the defending Model’s Armour by (3)."
+		},
+		{
+			"name":"Rend(3)",
+			"description":"When making an Armour Roll against hits made by this Weapon reduce the defending Model’s Armour by (3)."
+		},
+		{
+			"name":"Template(Teardrop)",
+			"description":"There are three types of Template: Small, Large and Teardrop Template. Any Model whose base is partially or completely under the Template will be hit and subject to the Weapon’s Damage and Weapon Properties. Please refer to the Template section p.51 for full Template rules."
+		},
+		{
+			"name":"Template(Large)",
+			"description":"There are three types of Template: Small, Large and Teardrop Template. Any Model whose base is partially or completely under the Template will be hit and subject to the Weapon’s Damage and Weapon Properties. Please refer to the Template section p.51 for full Template rules."
+		},
+		{
+			"name":"Spray",
+			"description":"+1 Marksmanship when Shooting at Pass Range."
+		},
+		{
+			"name":"Smoke",
+			"description":"Smoke is utilised using the Template specified in the Weapon profile. A Weapon with the Smoke property may fire without declaring a Target Model (even as a Reaction or Firefight). The Template represents a cloud of Smoke. Smoke does not block Line of Sight, but any target Model in or behind Smoke benefits from a special M-2 Cover Bonus (this bonus stacks with normal cover). Furthermore, no Model may gain a Charge Bonus if part of their Charge Move was through Smoke. During the Cleanup Phase remove the Smoke Template."
+		},
+		{
+			"name":"Deviate(3)",
+			"description":"Sometimes Template Weapons are off target, in which case we need to determine where they land. If the roll to hit is a Fail scatter d10” from the original target. If the roll to hit is a Pass then scatter 3” in a random direction. If the roll to hit is a \"Nailed It\" or Feat the Template lands on target. To determine direction see Scatter on p.52."
+		}
+	],
+	"weapons":
+	[
+		{
+			"name":"Bullpup",
+			"pass_range":10,
+			"nail_range":16,
+			"pass_damage":3,
+			"nail_damage":4,
+			"rules":
+			[
+				"Pierce(1)"
+			]
+		},
+		{
+			"name":"Souvla",
+			"pass_damage":2,
+			"nail_damage":4,
+			"rules":
+			[
+				"Fire(1)"
+			]
+		},
+		{
+			"name":"Buzzer",
+			"pass_range":0,
+			"nail_range":0,
+			"pass_damage":1,
+			"nail_damage":1,
+			"rules":
+			[
+				"Stun(1)",
+				"Rend(3)",
+				"Template(Teardrop)"
+			]
+		},
+		{
+			"name":"Axe",
+			"pass_damage":3,
+			"nail_damage":4,
+			"rules":
+			[
+				"Rend(1)"
+			]
+		},
+		{
+			"name":"Flechette gun",
+			"pass_range":9,
+			"nail_range":15,
+			"pass_damage":2,
+			"nail_damage":4,
+			"rules":
+			[
+				"Spray"
+			]
+		},
+		{
+			"name":"Shock axe",
+			"pass_damage":3,
+			"nail_damage":4,
+			"rules":
+			[
+				"Rend(1)"
+			]
+		},
+		{
+			"name":"Smoke launcher",
+			"pass_range":12,
+			"nail_range":12,
+			"pass_damage":3,
+			"nail_damage":4,
+			"rules":
+			[
+				"Smoke",
+				"Deviate(3)",
+				"Template(Large)"
+			]
+		}
+	],
+	"skills":
+	[
+		{
+			"name":"Sting like a bee",
+			"description":"When chargin this Model gains +1 damage in addition to the normal charge bonus."
+		},
+		{
+			"name":"Undaunted",
+			"description":"Immediately after making a CC test this model may re-roll the Attribute Die. In addition, this Model gains +1/+2 movement when declaring a charge."
+		},
+		{
+			"name":"Aggressor",
+			"description":"When taking a CC test this model may re-roll the feat die."
+		},
+		{
+			"name":"Camouflaged",
+			"description":"When an enemy model targets this model with a shoot action that enemy is at -1 marksmanship."
+		},
+		{
+			"name":"Savage",
+			"description":"Immediately after making a CC test this model may re-roll the Attribute Die."
+		},
+		{
+			"name":"Berserk",
+			"description":"While wounded this model gains +1cc and +1/+1 move."
+		},
+		{
+			"name":"Mobility(climb)",
+			"description":"When making a climb test this model may re-roll the Attribute die."
+		},
+		{
+			"name":"Reflexes(1)",
+			"description":"Whenever this model takes damage from an enemy model it may re-roll up to 1 failed armour die."
+		},
+		{
+			"name":"Evade",
+			"description":"When targeting this model with a shoot action an enemy model will require a \"Nailed it\" result to successfully hit this model."
+		}
+	],
+	"factions":
+	[
+		{
+			"name":"Bondsmen",
+			"type":0,
+			"units":[
+				{
+					"name":"Limossk",
+					"unique_name":"Limossk",
+					"type":0,
+					"role":"leader",
+					"max":1,
+					"points":25,
+					"action_points":3,
+					"action_points_max":5,
+					"pass_speed":4,
+					"nail_speed":6,
+					"wounds":4,
+					"armor":2,
+					"close_combat":7,
+					"agility":6,
+					"marksmanship":6,
+					"intelligence":7,
+					"toughness":4,
+					"weapons":
+					[
+						"Bullpup",
+						"Souvla"
+					],
+					"skills":
+					[
+						"Sting like a bee",
+						"Undaunted"
+					]
+				}, 
+				{
+					"name":"Gersla",
+					"unique_name":"Gersla",
+					"type":0,
+					"role":"scout",
+					"max":1,
+					"points":16,
+					"action_points":2,
+					"action_points_max":4,
+					"pass_speed":4,
+					"nail_speed":6,
+					"wounds":4,
+					"armor":2,
+					"close_combat":7,
+					"agility":6,
+					"marksmanship":6,
+					"intelligence":6,
+					"toughness":4,
+					"weapons":
+					[
+						"Buzzer",
+						"Axe"
+					],
+					"skills":
+					[
+						"Aggressor",
+						"Camouflaged"
+					]
+				},
+				{
+					"name":"Fancagne",
+					"unique_name":"Fancagne",
+					"type":0,
+					"role":"Tough",
+					"max":1,
+					"points":25,
+					"action_points":2,
+					"action_points_max":4,
+					"pass_speed":5,
+					"nail_speed":7,
+					"wounds":5,
+					"armor":2,
+					"close_combat":7,
+					"agility":6,
+					"marksmanship":5,
+					"intelligence":6,
+					"toughness":4,
+					"weapons":
+					[
+						"Flechette gun",
+						"Shock axe"
+					],
+					"skills":
+					[
+						"Savage",
+						"Berserk",
+						"Mobility(climb)"
+					]
+				},
+				{
+					"name":"Alaya",
+					"unique_name":"Alaya",
+					"type":0,
+					"role":"Medic",
+					"max":1,
+					"points":16,
+					"action_points":2,
+					"action_points_max":5,
+					"pass_speed":5,
+					"nail_speed":6,
+					"wounds":4,
+					"armor":1,
+					"close_combat":7,
+					"agility":6,
+					"marksmanship":5,
+					"intelligence":6,
+					"toughness":3,
+					"weapons":
+					[
+						"Flechette gun",
+						"Axe"
+					],
+					"skills":
+					[
+						"Savage",
+						"Reflexes(1)"
+					]
+				},
+				{
+					"name":"Jorra",
+					"unique_name":"Jorra",
+					"type":0,
+					"role":"Mech",
+					"max":1,
+					"points":17,
+					"action_points":2,
+					"action_points_max":4,
+					"pass_speed":4,
+					"nail_speed":6,
+					"wounds":4,
+					"armor":1,
+					"close_combat":7,
+					"agility":6,
+					"marksmanship":5,
+					"intelligence":6,
+					"toughness":3,
+					"weapons":
+					[
+						"Smoke launcher",
+						"Axe"
+					],
+					"skills":
+					[
+						"Evade",
+						"Undaunted"
+					]
+				}
+			]
+		}
+	]
+}
